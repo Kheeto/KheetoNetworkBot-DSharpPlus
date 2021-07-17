@@ -8,7 +8,7 @@ namespace KheetoNetworkBot.Comandi.Moderazione
 {
     public class AnnuncioComando : BaseCommandModule
     {
-        [Command("annuncio")]
+        [Command("Annuncio")]
         [Description("Manda un annuncio in un embed nel canale Annunci.")]
         [RequirePermissions(DSharpPlus.Permissions.ManageGuild)]
         public async Task Comando(CommandContext command, [Description("Testo dell'annuncio")] params string[] Testo)
