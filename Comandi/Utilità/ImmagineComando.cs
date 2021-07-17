@@ -38,12 +38,15 @@ namespace KheetoNetworkBot.Comandi.Moderazione
 
             DiscordEmbedBuilder embed = new DiscordEmbedBuilder()
             {
+                Title = command.Member.DisplayName,
+                Description = "Ha mandato un immagine.",
                 Color = command.Member.Color,
                 Footer = footer,
                 Thumbnail = thumbnail
             };
 
-            await command.RespondAsync(embed);
+            await command.Channel.SendMessageAsync(embed);
+            await command.Message.DeleteAsync();
         }
     }
 }
