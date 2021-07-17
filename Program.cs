@@ -113,6 +113,8 @@ namespace DSharpPlusTutorial
             Commands.RegisterCommands<CancellaComando>();
             Commands.RegisterCommands<KickComando>();
             Commands.RegisterCommands<BanComando>();
+            Commands.RegisterCommands<InfoComando>();
+            Commands.RegisterCommands<ImmagineComando>();
         }
 
         async Task OnReady(DiscordClient client, ReadyEventArgs ev)
