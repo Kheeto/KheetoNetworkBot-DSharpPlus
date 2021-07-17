@@ -33,17 +33,6 @@ namespace DSharpPlusTutorial
 
             Client.Ready += OnReady;
 
-            #region Config Voice Next
-
-            VoiceNextConfiguration configVoice = new VoiceNextConfiguration
-            {
-                AudioFormat = AudioFormat.Default,
-                EnableIncoming = false,
-                PacketQueueSize = 25,
-            };
-
-            #endregion
-
             Commands = Client.UseCommandsNext(configComandi);
             Commands.SetHelpFormatter<CustomHelp>();
 
