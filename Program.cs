@@ -33,38 +33,6 @@ namespace DSharpPlusTutorial
 
             Client.Ready += OnReady;
 
-            #region Config Comandi
-
-            CommandsNextConfiguration configComandi = new CommandsNextConfiguration
-            {
-                StringPrefixes = new string[] { "k!" },
-                EnableDms = false,
-                EnableDefaultHelp = true,
-                EnableMentionPrefix = true,
-            };
-
-            #endregion
-
-            #region Config Interactivity
-
-            PaginationEmojis paginationEmojis = new PaginationEmojis();
-            paginationEmojis.Left = DiscordEmoji.FromName(Client, ":arrow_left:");
-            paginationEmojis.Right = DiscordEmoji.FromName(Client, ":arrow_right:");
-            paginationEmojis.SkipLeft = DiscordEmoji.FromName(Client, ":rewind:");
-            paginationEmojis.SkipRight = DiscordEmoji.FromName(Client, ":fast_forward:");
-            paginationEmojis.Stop = DiscordEmoji.FromName(Client, ":octagonal_sign:");
-
-            InteractivityConfiguration configInteractivity = new InteractivityConfiguration
-            {
-                PaginationBehaviour = DSharpPlus.Interactivity.Enums.PaginationBehaviour.WrapAround,
-                PaginationDeletion = DSharpPlus.Interactivity.Enums.PaginationDeletion.DeleteMessage,
-                PaginationEmojis = paginationEmojis,
-                PollBehaviour = DSharpPlus.Interactivity.Enums.PollBehaviour.DeleteEmojis,
-                Timeout = new TimeSpan(0, 0, 60),
-            };
-
-            #endregion
-
             #region Config Voice Next
 
             VoiceNextConfiguration configVoice = new VoiceNextConfiguration
