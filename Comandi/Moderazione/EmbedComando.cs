@@ -13,7 +13,7 @@ namespace KheetoNetworkBot.Comandi.Moderazione
 {
     public class EmbedComando : BaseCommandModule
     {
-        [Command("embed")]
+        [Command("Embed")]
         [Description("Comando per creare un embed personalizzato.")]
         [RequirePermissions(DSharpPlus.Permissions.ManageMessages)]
         public async Task Comando(CommandContext command)
