@@ -12,7 +12,7 @@ namespace KheetoNetworkBot.Comandi.Moderazione
 {
     public class RipetiComando : BaseCommandModule
     {
-        [Command("ripeti")]
+        [Command("Ripeti")]
         [Description("Ripete quello che è stato scritto dall'utente dopo aver eseguito il comando")]
         [RequirePermissions(DSharpPlus.Permissions.ManageMessages)]
         public async Task Comando(CommandContext command)
