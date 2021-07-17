@@ -14,7 +14,7 @@ namespace KheetoNetworkBot.Comandi.Moderazione
 {
     public class ImmagineComando : BaseCommandModule
     {
-        [Command("immagine")]
+        [Command("Immagine")]
         [Description("Manda un immagine in un embed.")]
         public async Task Comando(CommandContext command, [Description("Link dell'immagine da convertire.")] string LinkImmagine)
         {
