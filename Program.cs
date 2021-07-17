@@ -27,22 +27,7 @@ namespace DSharpPlusTutorial
 
         public async Task EseguiBot()
         {
-            #region Config Bot
-
-            DiscordConfiguration configBot = new DiscordConfiguration
-            {
-                Token = "token xd",
-                TokenType = TokenType.Bot,
-                AutoReconnect = true,
-                MinimumLogLevel = Microsoft.Extensions.Logging.LogLevel.Debug,
-                AlwaysCacheMembers = true,
-                Proxy = null,
-                GatewayCompressionLevel = GatewayCompressionLevel.Stream,
-                MessageCacheSize = 2048,
-                UseRelativeRatelimit = false,
-            };
-
-            #endregion
+            Config config = new Config(Client);
 
             Client = new DiscordClient(configBot);
 
