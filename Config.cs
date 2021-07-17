@@ -26,7 +26,7 @@ namespace KheetoNetworkBot
 
         public DiscordConfiguration configBot = new DiscordConfiguration
         {
-            Token = "NjU2OTE4NTQ4NDcxMzQ5MjYw.XfppEg.e8AnuUpjL6X9YOK_9DNq1rx-whc",
+            Token = "token",
             TokenType = TokenType.Bot,
             AutoReconnect = true,
             MinimumLogLevel = Microsoft.Extensions.Logging.LogLevel.Debug,
