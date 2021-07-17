@@ -34,12 +34,22 @@ namespace DSharpPlusTutorial
             stringBuilder.AppendLine("Comando: " + command.Name + command.Description);
 
             string argomenti = "```";
+            int index = 0;
 
             foreach(CommandOverload overl in command.Overloads)
             {
                 foreach(CommandArgument arg in overl.Arguments)
                 {
-                    argomenti = argomenti + arg.Name;
+                    index++;
+                    if (overl.Arguments.Count == 1 || overl.Arguments.Count == index)
+                    {
+                        argomenti = argomenti + arg.Name + ". ";
+                    }
+                    else
+                    {
+                        argomenti = argomenti + arg.Name + ", ";
+                    }
+                  
                 }
             }
 
