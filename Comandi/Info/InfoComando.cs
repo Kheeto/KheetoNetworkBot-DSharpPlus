@@ -8,7 +8,7 @@ namespace KheetoNetworkBot.Comandi.Info
 {
     public class InfoComando : BaseCommandModule
     {
-        [Command("info")]
+        [Command("Info")]
         [Description("Mostra le informazioni del server.")]
         public async Task Comando(CommandContext command)
         {
