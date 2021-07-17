@@ -38,6 +38,7 @@ namespace KheetoNetworkBot.Comandi.Moderazione
 
             DiscordEmbedBuilder embed = new DiscordEmbedBuilder()
             {
+                Color = command.Member.Color,
                 Footer = footer,
                 Thumbnail = thumbnail
             };
