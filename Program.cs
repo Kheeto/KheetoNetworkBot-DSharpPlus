@@ -29,17 +29,17 @@ namespace DSharpPlusTutorial
         {
             Config config = new Config(Client);
 
-            Client = new DiscordClient(configBot);
+            Client = new DiscordClient(config.configBot);
 
             Client.Ready += OnReady;
 
-            Commands = Client.UseCommandsNext(configComandi);
+            Commands = Client.UseCommandsNext(config.configComandi);
             Commands.SetHelpFormatter<CustomHelp>();
 
             await RegistraComandi().ConfigureAwait(false);
 
-            Client.UseInteractivity(configInteractivity);
-            Client.UseVoiceNext(configVoice);
+            Client.UseInteractivity(config.configInteractivity);
+            Client.UseVoiceNext(config.configVoice);
 
             await Client.ConnectAsync(null, UserStatus.Idle);
             await Task.Delay(-1);
