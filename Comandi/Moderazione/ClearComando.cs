@@ -10,7 +10,7 @@ namespace KheetoNetworkBot.Comandi.Moderazione
 {
     public class ClearComando : BaseCommandModule
     {
-        [Command("clear")]
+        [Command("Clear")]
         [Description("Cancella il determinato numero di messaggi.")]
         [RequirePermissions(DSharpPlus.Permissions.ManageMessages)]
         public async Task Comando(CommandContext command, [Description("Numero di messaggi da cancellare.")] int Numero)
