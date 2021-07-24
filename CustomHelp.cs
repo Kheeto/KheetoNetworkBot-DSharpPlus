@@ -7,7 +7,7 @@ using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Entities;
 using DSharpPlus.CommandsNext.Converters;
 
-namespace DSharpPlusTutorial
+namespace KheetoNetworkBot
 {
     public class CustomHelp : BaseHelpFormatter
     {
@@ -70,7 +70,23 @@ namespace DSharpPlusTutorial
 
             foreach (Command command in subcommands)
             {
-                comandi = comandi + command.Name + ", ";
+                char[] commandChars = command.Name.ToCharArray();
+                string commandName = null;
+                bool first = true;
+                foreach(char c in commandChars)
+                {
+                    if (c == commandChars[0] && first)
+                    {
+                        first = false;
+                        char[] chars = c.ToString().ToUpper().ToCharArray();
+                        commandName = commandName + chars[0].ToString();
+                    }
+                    else
+                    {
+                        commandName = commandName + c.ToString();
+                    }
+                }
+                if(commandName != null) comandi = comandi + commandName + ", ";
             }
 
             comandi = comandi + "```";
