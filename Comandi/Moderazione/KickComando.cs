@@ -14,7 +14,7 @@ namespace KheetoNetworkBot.Comandi.Moderazione
         [Command("Kick")]
         [Description("Espelle un utente dal server.")]
         [RequirePermissions(DSharpPlus.Permissions.KickMembers)]
-        public async Task Comando(CommandContext command, [Description("Utente da Espellere.")] DiscordMember Utente, [Description("Motivo dell'Espulsione")] params string[] Motivo)
+        public async Task Comando(CommandContext command, [Description("Utente da Espellere")] DiscordMember Utente, [Description("Motivo dell'Espulsione")] params string[] Motivo)
         {
             string motivoFinale = null;
             if (Motivo.Length > 0)
