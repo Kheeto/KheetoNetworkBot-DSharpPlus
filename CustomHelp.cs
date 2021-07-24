@@ -24,7 +24,6 @@ namespace KheetoNetworkBot
         public override CommandHelpMessage Build()
         {
             return new CommandHelpMessage(embed: embed);
-            return new CommandHelpMessage(content: stringBuilder.ToString());
         }
 
         public override BaseHelpFormatter WithCommand(Command command)
@@ -38,8 +37,10 @@ namespace KheetoNetworkBot
 
             foreach(CommandOverload overl in command.Overloads)
             {
+
                 foreach(CommandArgument arg in overl.Arguments)
                 {
+
                     index++;
                     if (overl.Arguments.Count == 1 || overl.Arguments.Count == index)
                     {
@@ -51,6 +52,7 @@ namespace KheetoNetworkBot
                     }
                   
                 }
+
             }
 
             argomenti += "```";
@@ -70,11 +72,13 @@ namespace KheetoNetworkBot
 
             foreach (Command command in subcommands)
             {
+
                 char[] commandChars = command.Name.ToCharArray();
                 string commandName = null;
                 bool first = true;
                 foreach(char c in commandChars)
                 {
+
                     if (c == commandChars[0] && first)
                     {
                         first = false;
@@ -85,8 +89,10 @@ namespace KheetoNetworkBot
                     {
                         commandName += c.ToString();
                     }
+
                 }
                 if(commandName != null) comandi = comandi + commandName + ", ";
+
             }
 
             comandi = comandi + "```";
