@@ -14,7 +14,7 @@ namespace KheetoNetworkBot.Comandi.Moderazione
         [Command("Ban")]
         [Description("Banna un utente dal server.")]
         [RequirePermissions(DSharpPlus.Permissions.BanMembers)]
-        public async Task Comando(CommandContext command, [Description("Utente da Bannare.")] DiscordMember Utente, [Description("Motivo del Ban") ]params string[] Motivo)
+        public async Task Comando(CommandContext command, [Description("Utente da Bannare")] DiscordMember Utente, [Description("Motivo del Ban") ]params string[] Motivo)
         {
             string motivoFinale = null;
             if (Motivo.Length > 0)
