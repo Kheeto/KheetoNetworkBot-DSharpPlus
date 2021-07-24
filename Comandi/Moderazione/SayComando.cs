@@ -12,7 +12,7 @@ namespace KheetoNetworkBot.Comandi.Moderazione
         [Command("Say")]
         [Description("Ripete quello che è stato scritto dall'utente")]
         [RequirePermissions(DSharpPlus.Permissions.ManageMessages)]
-        public async Task Comando(CommandContext command, [Description("Testo da Ripetere.")] params string[] Testo)
+        public async Task Comando(CommandContext command, [Description("Testo da Ripetere")] params string[] Testo)
         {
             if(Testo.Length == 0)
             {
