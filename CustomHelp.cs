@@ -43,17 +43,17 @@ namespace KheetoNetworkBot
                     index++;
                     if (overl.Arguments.Count == 1 || overl.Arguments.Count == index)
                     {
-                        argomenti = argomenti + arg.Name + ". ";
+                        argomenti += arg.Description + ". ";
                     }
                     else
                     {
-                        argomenti = argomenti + arg.Name + ", ";
+                        argomenti += arg.Description + ", ";
                     }
                   
                 }
             }
 
-            argomenti = argomenti + "```";
+            argomenti += "```";
 
             if (argomenti == "``````") argomenti = "Nessun argomento richiesto.";
 
@@ -79,11 +79,11 @@ namespace KheetoNetworkBot
                     {
                         first = false;
                         char[] chars = c.ToString().ToUpper().ToCharArray();
-                        commandName = commandName + chars[0].ToString();
+                        commandName += chars[0].ToString();
                     }
                     else
                     {
-                        commandName = commandName + c.ToString();
+                        commandName += c.ToString();
                     }
                 }
                 if(commandName != null) comandi = comandi + commandName + ", ";
