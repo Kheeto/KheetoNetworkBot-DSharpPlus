@@ -117,6 +117,7 @@ namespace KheetoNetworkBot
             Commands.RegisterCommands<BanComando>();
             Commands.RegisterCommands<InfoComando>();
             Commands.RegisterCommands<ImmagineComando>();
+            Commands.RegisterCommands<StatoComando>();
         }
 
         async Task OnReady(DiscordClient client, ReadyEventArgs ev)
