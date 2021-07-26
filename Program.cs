@@ -9,7 +9,9 @@ using DSharpPlus.Interactivity.Extensions;
 using DSharpPlus.VoiceNext;
 using KheetoNetworkBot.Comandi.Utilità;
 using KheetoNetworkBot.Comandi.Moderazione;
+using KheetoNetworkBot.Comandi.Musica;
 using KheetoNetworkBot.Comandi.Info;
+using KheetoNetworkBot.Comandi.Divertimento;
 
 namespace KheetoNetworkBot
 {
@@ -33,7 +35,7 @@ namespace KheetoNetworkBot
 
             DiscordConfiguration configBot = new DiscordConfiguration
             {
-                Token = "token lol",
+                Token = "token xd",
                 TokenType = TokenType.Bot,
                 AutoReconnect = true,
                 MinimumLogLevel = Microsoft.Extensions.Logging.LogLevel.Debug,
@@ -58,6 +60,7 @@ namespace KheetoNetworkBot
                 EnableDms = false,
                 EnableDefaultHelp = true,
                 EnableMentionPrefix = true,
+                CaseSensitive = false
             };
 
             #endregion
@@ -96,7 +99,7 @@ namespace KheetoNetworkBot
             Commands = Client.UseCommandsNext(configComandi);
             Commands.SetHelpFormatter<CustomHelp>();
 
-            await RegistraComandi().ConfigureAwait(false);
+            await RegistraComandiAsync().ConfigureAwait(false);
 
             Client.UseInteractivity(configInteractivity);
             Client.UseVoiceNext(configVoice);
@@ -105,7 +108,7 @@ namespace KheetoNetworkBot
             await Task.Delay(-1);
         }
 
-        async Task RegistraComandi()
+        async Task RegistraComandiAsync()
         {
             Commands.RegisterCommands<AnnuncioComando>();
             Commands.RegisterCommands<EmbedComando>();
@@ -118,6 +121,13 @@ namespace KheetoNetworkBot
             Commands.RegisterCommands<InfoComando>();
             Commands.RegisterCommands<ImmagineComando>();
             Commands.RegisterCommands<StatoComando>();
+            Commands.RegisterCommands<JoinComando>();
+            Commands.RegisterCommands<LeaveComando>();
+            Commands.RegisterCommands<PlayComando>();
+            Commands.RegisterCommands<PollComando>();
+            Commands.RegisterCommands<CodiceComando>();
+            Commands.RegisterCommands<ReazioneComando>();
+            Commands.RegisterCommands<LoremIpsumComando>();
         }
 
         async Task OnReady(DiscordClient client, ReadyEventArgs ev)
@@ -133,3 +143,4 @@ namespace KheetoNetworkBot
         }
     }
 }
+
