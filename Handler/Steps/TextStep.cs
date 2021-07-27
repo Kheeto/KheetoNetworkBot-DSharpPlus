@@ -35,7 +35,7 @@ namespace KheetoNetworkBot.Handler.Steps
         {
             DiscordEmbedBuilder.EmbedFooter footer = new DiscordEmbedBuilder.EmbedFooter
             {
-                Text = "Kheeto Network",
+                Text = "Kheeto Network - Supporto",
                 IconUrl = "https://cdn.discordapp.com/icons/654083852838502413/9a50cb8c9806ea2c26e36a0ea0bb76ec.webp?size=128",
             };
 
@@ -68,7 +68,7 @@ namespace KheetoNetworkBot.Handler.Steps
 
                 OnMessageAdded(messageResult.Result);
 
-                if(messageResult.Result.Content.ToLower().Equals("k!cancel"))
+                if(messageResult.Result.Content.ToLower().Equals("k!annulla"))
                 {
                     return true;
                 }
