@@ -13,6 +13,8 @@ using KheetoNetworkBot.Comandi.Musica;
 using KheetoNetworkBot.Comandi.Info;
 using KheetoNetworkBot.Comandi.Divertimento;
 using System.Collections.Generic;
+using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Hosting;
 
 namespace KheetoNetworkBot
 {
@@ -20,8 +22,9 @@ namespace KheetoNetworkBot
     {
         static void Main(string[] args)
         {
-            new Bot().EseguiBot().GetAwaiter().GetResult();
+            new Bot().StartAsync().GetAwaiter().GetResult();
         }
+
     }
 
     public class Bot
@@ -30,8 +33,8 @@ namespace KheetoNetworkBot
         public CommandsNextExtension Commands { get; private set; }
         public InteractivityExtension Interactivity { get; private set; }
 
-        public async Task EseguiBot()
-        {
+        public async Task StartAsync() {
+
             #region Config Bot
 
             DiscordConfiguration configBot = new DiscordConfiguration
@@ -61,7 +64,7 @@ namespace KheetoNetworkBot
                 EnableDms = false,
                 EnableDefaultHelp = true,
                 EnableMentionPrefix = true,
-                CaseSensitive = false
+                CaseSensitive = false,
             };
 
             #endregion
@@ -105,7 +108,8 @@ namespace KheetoNetworkBot
             Client.UseInteractivity(configInteractivity);
             Client.UseVoiceNext(configVoice);
 
-            await Client.ConnectAsync(null, UserStatus.Idle);
+            await Client.ConnectAsync(null, UserStatus.Idle).ConfigureAwait(false);
+
             await Task.Delay(-1);
         }
 
@@ -134,6 +138,8 @@ namespace KheetoNetworkBot
             Commands.RegisterCommands<SudoComando>();
             Commands.RegisterCommands<NickComando>();
             Commands.RegisterCommands<SupportoComando>();
+            Commands.RegisterCommands<GrattaEVinciComando>();
+            Commands.RegisterCommands<MemeComando>();
         }
 
         async Task OnReady(DiscordClient client, ReadyEventArgs ev)
