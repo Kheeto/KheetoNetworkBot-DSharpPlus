@@ -12,6 +12,7 @@ using KheetoNetworkBot.Comandi.Moderazione;
 using KheetoNetworkBot.Comandi.Musica;
 using KheetoNetworkBot.Comandi.Info;
 using KheetoNetworkBot.Comandi.Divertimento;
+using System.Collections.Generic;
 
 namespace KheetoNetworkBot
 {
@@ -77,7 +78,7 @@ namespace KheetoNetworkBot
             InteractivityConfiguration configInteractivity = new InteractivityConfiguration
             {
                 PaginationBehaviour = DSharpPlus.Interactivity.Enums.PaginationBehaviour.WrapAround,
-                PaginationDeletion = DSharpPlus.Interactivity.Enums.PaginationDeletion.DeleteMessage,
+                PaginationDeletion = DSharpPlus.Interactivity.Enums.PaginationDeletion.DeleteEmojis,
                 PaginationEmojis = paginationEmojis,
                 PollBehaviour = DSharpPlus.Interactivity.Enums.PollBehaviour.DeleteEmojis,
                 Timeout = new TimeSpan(0, 0, 60),
@@ -128,6 +129,11 @@ namespace KheetoNetworkBot
             Commands.RegisterCommands<CodiceComando>();
             Commands.RegisterCommands<ReazioneComando>();
             Commands.RegisterCommands<LoremIpsumComando>();
+            Commands.RegisterCommands<MathComando>();
+            Commands.RegisterCommands<PingComando>();
+            Commands.RegisterCommands<SudoComando>();
+            Commands.RegisterCommands<NickComando>();
+            Commands.RegisterCommands<SupportoComando>();
         }
 
         async Task OnReady(DiscordClient client, ReadyEventArgs ev)
@@ -142,5 +148,5 @@ namespace KheetoNetworkBot
             Console.WriteLine("Stato del Bot Aggiornato");
         }
     }
-}
 
+}
