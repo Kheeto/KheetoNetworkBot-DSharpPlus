@@ -22,7 +22,9 @@ namespace KheetoNetworkBot.Handler.Steps
 
         public override IDialogueStep NextStep => options[selectedEmoji].NextStep;
 
-        public Action<DiscordEmoji> OnValidResult { get; set; } = delegate { };
+        public Action<DiscordEmoji> OnValidResult { get; set; } = delegate {
+
+        };
 
         public override async Task<bool> ProcessStep(DiscordClient client, DiscordChannel channel, DiscordUser user)
         {
