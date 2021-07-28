@@ -6,6 +6,8 @@ using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
 using DSharpPlus.Interactivity.Extensions;
+using KheetoNetworkBot.LIB.Attributes;
+using KheetoNetworkBot.LIB.Enums;
 
 namespace KheetoNetworkBot.Comandi.Divertimento
 {
