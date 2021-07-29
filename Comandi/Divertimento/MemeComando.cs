@@ -12,7 +12,7 @@ namespace KheetoNetworkBot.Comandi.Divertimento
     public class MemeComando : BaseCommandModule
     {
         [Command("Meme")]
-        [Description("Manda una meme casuale.")]
+        [Description("Manda una meme casuale tra quelle personalizzate di Kheeto Network.")]
         public async Task Comando(CommandContext command)
         {
 
