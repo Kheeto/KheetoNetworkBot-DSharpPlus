@@ -140,6 +140,7 @@ namespace KheetoNetworkBot
             Commands.RegisterCommands<SupportoComando>();
             Commands.RegisterCommands<GrattaEVinciComando>();
             Commands.RegisterCommands<MemeComando>();
+            Commands.RegisterCommands<ReactionRoleComando>();
         }
 
         async Task OnReady(DiscordClient client, ReadyEventArgs ev)
