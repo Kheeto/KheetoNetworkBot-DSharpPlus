@@ -15,9 +15,9 @@ namespace KheetoNetworkBot.Comandi.Server
         [Command("ReactionRole")]
         [Description("Crea un messaggio con un reaction role.")]
         [RequirePermissions(DSharpPlus.Permissions.ManageGuild)]
-        public async Task Comando(CommandContext command, string title, string description, string color, DiscordEmoji emoji)
+        public async Task Comando(CommandContext command, string title, string description, string color, DiscordEmoji emoji, DiscordRole role)
         {
-            await new SingleReactionRole(command, title, description, color, emoji).RunAsync().ConfigureAwait(false);
+            await new SingleReactionRole(command, title, description, color, emoji, role).RunAsync().ConfigureAwait(false);
         }
     }
 }
