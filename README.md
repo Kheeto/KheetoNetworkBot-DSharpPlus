@@ -2,5 +2,5 @@
 Under MIT License
 
 ### About
-C# Discord Bot made by Kheeto using DSharpPlus.
-\nKheetoNetworkBot.LIB is required!
+C# Discord Bot made by Kheeto using DSharpPlus. 
+KheetoNetworkBot.LIB is required!
