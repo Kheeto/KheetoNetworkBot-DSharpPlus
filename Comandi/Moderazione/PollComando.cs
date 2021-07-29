@@ -21,7 +21,7 @@ namespace KheetoNetworkBot.Comandi.Moderazione
 
             DiscordEmbedBuilder.EmbedFooter footer = new DiscordEmbedBuilder.EmbedFooter
             {
-                Text = "Kheeto Network - Annunci",
+                Text = "Kheeto Network - Sondaggi",
                 IconUrl = "https://cdn.discordapp.com/icons/654083852838502413/9a50cb8c9806ea2c26e36a0ea0bb76ec.webp?size=128",
             };
 
