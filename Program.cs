@@ -12,9 +12,6 @@ using KheetoNetworkBot.Comandi.Moderazione;
 using KheetoNetworkBot.Comandi.Musica;
 using KheetoNetworkBot.Comandi.Info;
 using KheetoNetworkBot.Comandi.Divertimento;
-using System.Collections.Generic;
-using Microsoft.Extensions.Hosting;
-using Microsoft.AspNetCore.Hosting;
 
 namespace KheetoNetworkBot
 {
