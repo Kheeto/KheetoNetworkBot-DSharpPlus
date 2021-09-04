@@ -1,4 +1,4 @@
-# KheetoNetwork-Bot-DSharpPlus
+# EndlessNetwork-Bot-DSharpPlus
 Under MIT License
 
 ### About
